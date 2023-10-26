@@ -27,8 +27,8 @@ defined('MOODLE_INTERNAL') || die();
 
 $observers = [
         [
-                'eventname' => '\core\event\user_updated',
-                'callback'  => 'enrol_idnumber_plugin::user_updated',
+                'eventname' => '\core\event\user_loggedin',
+                'callback'  => 'enrol_idnumber_plugin::user_loggedin',
                 'priority'  => 9999,
         ],
 ];
