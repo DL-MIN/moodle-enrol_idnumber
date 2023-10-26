@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-use core\event\user_updated;
+use core\event\user_loggedin;
 
 /**
  * Course ID number enrolment plugin implementation.
@@ -49,13 +49,13 @@ class enrol_idnumber_plugin extends enrol_plugin {
                                      WHERE e.enrol = 'idnumber' AND e.status = 0 AND c.idnumber != ''";
 
     /**
-     * Called from the event observer on user updates.
+     * Called from the event observer on user login.
      *
-     * @param user_updated $event
+     * @param user_loggedin $event
      * @throws coding_exception
      * @throws dml_exception
      */
-    public static function user_updated(user_updated $event) {
+    public static function user_loggedin(user_loggedin $event) {
         if (!enrol_is_enabled('idnumber')) {
             return;
         }

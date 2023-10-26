@@ -25,9 +25,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2023102600;
+$plugin->version   = 2023102601;
 $plugin->requires  = 2023041800;
 $plugin->component = 'enrol_idnumber';
-$plugin->release   = '1.0';
+$plugin->release   = '1.1';
 $plugin->maturity  = MATURITY_STABLE;
 
